@@ -95,8 +95,9 @@ module.exports = (newValidationAppToUser) => {
                                                                         <h3 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 20px; line-height: 24px; text-align: left;" class="title-color">Orden de compra </h3>
                                                                         <h4>Hola ${newOrderAppToUser.nombre} su pago ha sido verificado exitosamente. <br>Su Mesa está en camino a su dirección de destino.</h4>
                                                                         <h4>Gracias por confiar en nosotros! Esperamos volverlo a ver pronto.</h4>
+                                                                         <h4 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 18px; line-height: 24px; text-align: left;" class="title-color">© 2020 La meseria.   Contacto: contacto@lameseria.cl</h4>
                                                                      </td>
-                                                                     <h4 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 18px; line-height: 24px; text-align: left;" class="title-color">© 2020 La meseria.   Contacto: contacto@lameseria.cl</h4>
+                                                                    
                                                                   </tr>
                                                                </tbody>
                                                             </table>
