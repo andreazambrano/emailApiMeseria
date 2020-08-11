@@ -8,8 +8,8 @@ module.exports = (newValidationAppToUser) => {
   host: 'email-smtp.us-east-1.amazonaws.com',
   secure: true,
   auth: {
-    user:'AKIA2QGC2OLTWSRULXGT',
-    pass: 'BB9/LSdWX0aUaQ91L7ByKv7RRaJroit49fAKDurPRQ1t',
+    user:'',
+    pass: '',
   },
   debug: true
   
@@ -57,7 +57,7 @@ module.exports = (newValidationAppToUser) => {
                            <tbody>
                     
                               <tr>
-                                 <td align="left">
+                                 <td>
                                     <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
                                        <tbody>
                                           <tr>
@@ -114,34 +114,7 @@ module.exports = (newValidationAppToUser) => {
                                     </table>
                                  </td>
                               </tr>
-                              <tr>
-                                 <td align="left">
-                                    <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" style="padding:0 24px;color:#999999;font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                       <tbody>
-                                          <tr>
-                                             <td align="center" width="100%">
-                                                <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                                   <tbody>
-                                                     
-                                                   </tbody>
-                                                </table>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <td align="center" width="100%">
-                                                <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                                   <tbody>
-                                                      <tr>
-                                                         <td align="center" style="padding:0 0 8px 0" width="100%"></td>
-                                                      </tr>
-                                                   </tbody>
-                                                </table>
-                                             </td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </td>
-                              </tr>
+                              
                            </tbody>
                         </table>
                      </center>
