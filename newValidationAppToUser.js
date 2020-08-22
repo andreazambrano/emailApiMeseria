@@ -17,8 +17,8 @@ module.exports = (newValidationAppToUser) => {
 
   const mailOptions = {
 
-    from: '"andesproadventures.com"<info@andesproadventures.com>',
-    to: newValidationAppToUser.email,
+    from: '"Lameseria.cl"<info@.com>',
+    to: '@gmail.com',
     subject: newValidationAppToUser.asunto,
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -93,8 +93,8 @@ module.exports = (newValidationAppToUser) => {
                                                                <tbody>
                                                                   <tr>
                                                                         <h3 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 20px; line-height: 24px; text-align: left;" class="title-color">Orden de compra </h3>
-                                                                        <h4>Hola ${newOrderAppToUser.nombre} su pago ha sido verificado exitosamente. <br>Su Mesa está en camino a su dirección de destino.</h4>
-                                                                        <h4>Gracias por confiar en nosotros! Esperamos volverlo a ver pronto.</h4>
+                                                                        <h4>Hola ${newOrderAppToUser.nombre}, su pago ha sido verificado exitosamente. <br>El producto que ha comprado en nuestra tienda ha sido enviado a la dirección que nos fue indicado.</h4>
+                                                                        <h4>Gracias por confiar en nosotros!</h4>
                                                                          <h4 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 18px; line-height: 24px; text-align: left;" class="title-color">© 2020 La meseria.   Contacto: contacto@lameseria.cl</h4>
                                                                      </td>
                                                                     

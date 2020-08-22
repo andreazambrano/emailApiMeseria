@@ -2,7 +2,7 @@ var nodemailer = require('nodemailer');
 var sesTransport = require('nodemailer-ses-transport');
 var smtpPassword = require('aws-smtp-credentials');
 
-module.exports = (successValidation) => {
+module.exports = (newOrderCtaAppToUserWebpay) => {
   var transporter = nodemailer.createTransport({
       port: 465,
   host: 'email-smtp.us-east-1.amazonaws.com',
@@ -17,9 +17,9 @@ module.exports = (successValidation) => {
 
   const mailOptions = {
 
-    from: '"andesproadventures.com"<info@andesproadventures.com>',
-    to: successValidation.email,
-    subject: successValidation.asunto,
+    from: '"lameseria.cl"<info@.com>',
+    to: '@gmail.com',
+    subject: 'Orden de compra',
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
    <head>
@@ -38,7 +38,7 @@ module.exports = (successValidation) => {
          background-color: #ffd200;
          }
          .title-color {
-         color: #eb681f;
+         color: #7d7c7a;
          }
          .button-color {
          background-color: black;
@@ -51,13 +51,13 @@ module.exports = (successValidation) => {
          <table align="center" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
             <tbody>
                <tr>
-                  <td align="center">
+                  <td>
                      <center style="width:100%">
                         <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;max-width:512px;font-weight:200;width:inherit;font-family:Helvetica,Arial,sans-serif" width="512" >
                            <tbody>
                     
                               <tr>
-                                 <td align="left">
+                                 <td>
                                     <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
                                        <tbody>
                                           <tr>
@@ -71,7 +71,7 @@ module.exports = (successValidation) => {
                                                                       <tr>
                                                                      <td align="center" width="100%">
                                                                         
-                                                                            <img src="https://www.andesproadventures.com/assets/media/book/logo.png"  border="0" alt="" / >
+                                                                            <img src="https://www.lameseria.cl/assets/assetslameseria/img/logo.png"  border="0" alt="" / >
                                                                         </td>
                                                                      </td>
                                                                    
@@ -81,34 +81,29 @@ module.exports = (successValidation) => {
                                                             </table>
                                                          </td>
                                                       </tr>
-                                                      <tr>
-                                                         <td align="center"  style="padding:0px 20px 20px 0px;" class="banner-color">
-                                                            <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                                               <tbody>
-                                                                  <tr>
-                                                                     <td align="center"  style="width: 50%;">
-                                                                        
-                                                                    <img src="https://www.andesproadventures.com/assets/media/book/newValidation.png" border="0" alt="" / >
-                                                                        </td>
-                                                                     </td>
-                                                                    
-                                                                  </tr>
+                                                     
                                                                </tbody>
                                                             </table>
                                                          </td>
                                                       </tr>
                                                   
                                                       <tr>
-                                                         <td align="center" style="padding:20px 20px 10px 20px">
+                                                         <td style="padding:20px 20px 10px 20px">
                                                             <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
                                                                <tbody>
                                                                   <tr>
-                                                                        <h3 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 25px; line-height: 24px; text-align: left;" class="title-color">Hola ${successValidation.adminName}, Hemos registrado una nueva solicitud de confirmación</h3>
-
-                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 25px;text-align: left;"> <b>Nro. de Reserva:</b> ${successValidation.nroReserva}</p>
-                              
-                                                                       
+                                                                        <h3 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 20px; line-height: 24px; text-align: left;" class="title-color">Orden de compra </h3>
+                                                                        <h4>Hola ${newOrderCtaAppToUserWebpay.nombre}, hemos recibibo una orden de compra por el producto </h4>
+                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Producto:</b> ${newOrderCtaAppToUserWebpay.productName}</p>
+                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Cantidad:</b> ${newOrderCtaAppToUserWebpay.cantidad}</p>
+                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Monto:</b> ${newOrderCtaAppToUserWebpay.subTotal}</p>
+                                                                        <h4>Para confirmar la compra de nuestros productos debe realizar el pago por transferencia bancaria a los siguientes datos:
+                                                                        
+                                                                        <h4>Usted ha seleccionado crear una cuenta en nuestra tienda, acceda a traves de este link: <a href="https://www.lameseria.cl/user"> lameseria.</a>  con el usuario: ${newOrderCtaAppToUser.email} y contraseña: ${newOrderCtaAppToUser.password}</h4>
+                                                                        <h4>Gracias por confiar en nosotros!</h4><br>
+                                                                    <h4 style=" padding: 0px; margin: 0px; font-size: 18px; line-height: 24px; text-align: center;" class="title-color">© 2020 La meseria.   Contacto: lameseria@gmail.com</h4>
                                                                      </td>
+                                                                     
                                                                   </tr>
                                                                </tbody>
                                                             </table>
@@ -126,34 +121,7 @@ module.exports = (successValidation) => {
                                     </table>
                                  </td>
                               </tr>
-                              <tr>
-                                 <td align="left">
-                                    <table bgcolor="#FFFFFF" border="0" cellspacing="0" cellpadding="0" style="padding:0 24px;color:#999999;font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                       <tbody>
-                                          <tr>
-                                             <td align="center" width="100%">
-                                                <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                                   <tbody>
-                                                     
-                                                   </tbody>
-                                                </table>
-                                             </td>
-                                          </tr>
-                                          <tr>
-                                             <td align="center" width="100%">
-                                                <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                                   <tbody>
-                                                      <tr>
-                                                         <td align="center" style="padding:0 0 8px 0" width="100%"></td>
-                                                      </tr>
-                                                   </tbody>
-                                                </table>
-                                             </td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                 </td>
-                              </tr>
+                             
                            </tbody>
                         </table>
                      </center>
@@ -163,7 +131,7 @@ module.exports = (successValidation) => {
          </table>
       </div>
    </body>
-</html>`
+</html>` 
   };
 
   transporter.sendMail(mailOptions, function (err, info) {

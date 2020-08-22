@@ -17,8 +17,8 @@ module.exports = (newOrderAppToUser) => {
 
   const mailOptions = {
 
-    from: '"lameseria.cl"<info@andesproadventures.com>',
-    to: 'andreyzf20@gmail.com',
+    from: '"lameseria.cl"<info@.com>',
+    to: '@gmail.com',
     subject: 'Orden de compra',
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -96,7 +96,7 @@ module.exports = (newOrderAppToUser) => {
                                                                         <h4>Hola ${newOrderAppToUser.nombre}, hemos recibibo una orden de compra por el producto </h4>
                                                                         <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Producto:</b> ${newOrderAppToUser.productName}</p>
                                                                         <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Cantidad:</b> ${newOrderAppToUser.cantidad}</p>
-                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Subtotal:</b> ${newOrderAppToUser.subTotal}</p>
+                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Monto:</b> ${newOrderAppToUser.subTotal}</p>
                                                                         
                                                                         <h4>Para confirmar la compra de nuestros productos debe realizar el pago por transferencia bancaria a los siguientes datos:
                                                                         <ul>
@@ -107,9 +107,9 @@ module.exports = (newOrderAppToUser) => {
                                                                            <li>Email: lameseria.cl@gmail.com</li>
                                                                         </ul>
                                                                          </h4>
-                                                                        <h4>Verificaremos su pago enviando el comprobante en el siguiente link: </h4>
+                                                                        <h4>Verificaremos su pago enviando el comprobante en el siguiente link: <a href="https://www.lameseria.cl/confirmacion"> confirmacion.</a> </h4>
 
-                                                                        <h4>Gracias por confiar en nosotros! Esperamos volverlo a ver pronto.</h4>
+                                                                        <h4>Gracias por confiar en nosotros!</h4>
                                                                      </td>
                                                                      <h4 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 18px; line-height: 24px; text-align: left;" class="title-color">© 2020 La meseria.   Contacto: contacto@lameseria.cl</h4>
                                                                   </tr>

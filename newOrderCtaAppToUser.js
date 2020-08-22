@@ -17,8 +17,8 @@ module.exports = (newOrderCtaAppToUser) => {
 
   const mailOptions = {
 
-    from: '"lameseria.cl"<info@andesproadventures.com>',
-    to: 'andreyzf20@gmail.com',
+    from: '"lameseria.cl"<info@.com>',
+    to: '@gmail.com',
     subject: 'Orden de compra',
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -96,7 +96,7 @@ module.exports = (newOrderCtaAppToUser) => {
                                                                         <h4>Hola ${newOrderCtaAppToUser.nombre}, hemos recibibo una orden de compra por el producto </h4>
                                                                         <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Producto:</b> ${newOrderCtaAppToUser.productName}</p>
                                                                         <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Cantidad:</b> ${newOrderCtaAppToUser.cantidad}</p>
-                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Subtotal:</b> ${newOrderCtaAppToUser.subTotal}</p>
+                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Monto:</b> ${newOrderCtaAppToUser.subTotal}</p>
                                                                         <h4>Para confirmar la compra de nuestros productos debe realizar el pago por transferencia bancaria a los siguientes datos:
                                                                         <ul>
                                                                            <li>Banco Santander</li>
@@ -106,9 +106,9 @@ module.exports = (newOrderCtaAppToUser) => {
                                                                            <li>Email: lameseria.cl@gmail.com</li>
                                                                         </ul>
                                                                          </h4>
-                                                                        <h4>Verifique su pago enviando la referencia de la transferencia al siguiente link: https://www.lameseria.cl/confirmacion </h4> 
-                                                                        <h4>Usted ha seleccionado crear una cuenta en nuestra tienda, acceda a traves de este link: https://www.lameseria.cl/user con el usuario: ${newOrderCtaAppToUser.email} y contraseña: ${newOrderCtaAppToUser.password}</h4>
-                                                                        <h4>Gracias por confiar en nosotros! Esperamos volverlo a ver pronto.</h4><br>
+                                                                        <h4>Verifique su pago enviando la referencia de la transferencia al siguiente link: <a href="https://www.lameseria.cl/confirmacion"> confirmacion.</a>   </h4> 
+                                                                        <h4>Usted ha seleccionado crear una cuenta en nuestra tienda, acceda a traves de este link: <a href="https://www.lameseria.cl/user"> lameseria.</a>  con el usuario: ${newOrderCtaAppToUser.email} y contraseña: ${newOrderCtaAppToUser.password}</h4>
+                                                                        <h4>Gracias por confiar en nosotros!</h4><br>
                                                                     <h4 style=" padding: 0px; margin: 0px; font-size: 18px; line-height: 24px; text-align: center;" class="title-color">© 2020 La meseria.   Contacto: lameseria@gmail.com</h4>
                                                                      </td>
                                                                      

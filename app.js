@@ -8,8 +8,8 @@ const newOrderAppToUser = require('./newOrderAppToUser');
 const newOrderAppToAdmin = require('./newOrderAppToAdmin');
 const newValidationAppToUser = require('./newValidationAppToUser');
 const newValidationAppToAdmin = require('./newValidationAppToAdmin');
-const successValidation = require('./successValidation');
-const newContactAppToAdmin = require('./newContactAppToAdmin');
+const newOrdeUserWebpay = require('./newOrdeUserWebpay');
+const newOrderCtaAppToUserWebpay = require('./newOrderCtaAppToUserWebpay');
 
 const app = express();
 app.use(bodyParser.json());
@@ -35,12 +35,12 @@ app.post('/newValidationAppToAdmin', (req, res) => {
 	newValidationAppToAdmin(req.body);
 	res.status(200).send;
 })
-app.post('/successValidation', (req, res) => {
-	successValidation(req.body);
+app.post('/newOrdeUserWebpay', (req, res) => {
+	newOrdeUserWebpay(req.body);
 	res.status(200).send;
 })
-app.post('/newContactAppToAdmin', (req, res) => {
-	newContactAppToAdmin(req.body);
+app.post('/newOrderCtaAppToUserWebpay', (req, res) => {
+	newOrderCtaAppToUserWebpay(req.body);
 	res.status(200).send;
 })
 app.listen(3005, () => {

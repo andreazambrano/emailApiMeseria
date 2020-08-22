@@ -17,8 +17,8 @@ module.exports = (newValidationAppToAdmin) => {
 
   const mailOptions = {
 
-    from: '"lameseria.cl"<info@andesproadventures.com>',
-    to: 'andreyzf20@gmail.com',
+    from: '"lameseria.cl"<info@.com>',
+    to: '@gmail.com',
     subject: newValidationAppToAdmin.productName,
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -93,8 +93,14 @@ module.exports = (newValidationAppToAdmin) => {
                                                                <tbody>
                                                                   <tr>
                                                                         <h3 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 20px; line-height: 24px; text-align: left;" class="title-color">Confirmación de orden de compra</h3>
-                                                                        <h4>Hola ${newValidationAppToAdmin.adminName}, Hemos registrado una confirmación de pago de la orden ${newValidationAppToAdmin.idOrder} para el producto ${newValidationAppToAdmin.productName} por el monto de ${newValidationAppToAdmin.subTotal} </h4>
-                                                                        <p style="margin: 20px 20px 20px 20px;font-size: 25px;text-align: left;"> <b>Nro. de referencia:</b> ${newValidationAppToAdmin.nroReferencia}</p>
+                                                                        <h4>Hola Administrador, Hemos registrado una confirmación de pago para la orden de compra
+                                                                      <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Numero de orden:</b> ${newValidationAppToAdmin.idOrder}</p>
+                                                                       <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Producto:</b> ${newValidationAppToAdmin.productName}</p>
+                                                                       <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Monto:</b> ${newValidationAppToAdmin.subTotal}</p>
+                                                                        </h4>
+                                                                        <h4>La referencia de pago por transferencia es la siguiente, verifique en su entidad bancaria.</h4>
+                                                                        // <p style="margin: 20px 20px 20px 20px;font-size: 25px;text-align: left;"> <b>Nro. de referencia:</b> ${newValidationAppToAdmin.nroReferencia}</p>
+                                                                        // <p style="margin: 20px 20px 20px 20px;font-size: 25px;text-align: left;"> <b>Nombre de cliente:</b> ${newValidationAppToAdmin.nombre}</p>
                                                                         
                                                                         <h4 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 18px; line-height: 24px; text-align: left;" class="title-color">© 2020 La meseria.   Contacto: contacto@lameseria.cl</h4> 
                                                                      </td>

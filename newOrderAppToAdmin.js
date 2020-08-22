@@ -17,8 +17,8 @@ module.exports = (newOrderAppToAdmin) => {
 
   const mailOptions = {
 
-    from: '"lameseria.cl"<info@andesproadventures.com>',
-    to: 'andreyzf20@gmail.com',
+    from: '"lameseria.cl"<info@.com>',
+    to: '@gmail.com',
     subject: 'Orden de compra',
     html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -93,7 +93,7 @@ module.exports = (newOrderAppToAdmin) => {
                                                                <tbody>
                                                                   <tr>
                                                                         <h3 style="font-weight: 600; padding: 0px; margin: 0px; font-size: 20px; line-height: 24px; text-align: left;" class="title-color">Orden de compra </h3>
-                                                                        <h4>Hola ${newOrderAppToAdmin.nombre} hemos recibibo una nueva orden de compra, le sera notificado cuando dicha orden sea confirmada por el cliente </h4>
+                                                                        <h4>Hola Administrador, hemos recibibo una nueva orden de compra, le sera notificado cuando dicha orden sea confirmada por el cliente </h4>
                                                                         <p style="margin: 20px 20px 20px 20px;font-size: 25px;text-align: left;"> <b>Cliente:</b> ${newBookAppToAdmin.nombre}</p>
                                                                         <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Producto:</b> ${newOrderAppToAdmin.productName}</p>
                                                                         <p style="margin: 20px 20px 20px 20px;font-size: 20px;text-align: left;"> <b>Cantidad:</b> ${newOrderAppToAdmin.cantidad}</p>
